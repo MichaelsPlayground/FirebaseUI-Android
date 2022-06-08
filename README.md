@@ -10,6 +10,8 @@ quickly connect common UI elements to [Firebase](https://firebase.google.com) AP
 
 A compatible FirebaseUI client is also available for [iOS](https://github.com/firebase/firebaseui-ios).
 
+Source: https://github.com/firebase/FirebaseUI-Android
+
 ## Table of contents
 
 1. [Usage](#usage)

@@ -77,6 +77,65 @@ public class SignedInActivity extends AppCompatActivity {
 
         IdpResponse response = getIntent().getParcelableExtra(ExtraConstants.IDP_RESPONSE);
 
+        // for Email verification see here:
+        // https://stackoverflow.com/a/63650628/8166854
+/*
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+  if (requestCode == RC_SIGN_IN) {
+    IdpResponse response = IdpResponse.fromResultIntent(data);
+
+    // Success
+        if (resultCode == RESULT_OK) {
+            final FirebaseUser currentUser = mAuth.getCurrentUser();
+
+            if(null != currentUser) {
+                if(currentUser.getEmail()!=null) {
+                    if(!currentUser.isEmailVerified()) {
+                        // Send Verification Email
+                        currentUser.sendEmailVerification()
+                                .addOnCompleteListener(this, new OnCompleteListener() {
+                                    @Override
+                                    public void onComplete(@NonNull Task task) {
+                                        // Check Success
+                                        if (task.isSuccessful()) {
+                                            Toast.makeText(getApplicationContext(),
+                                                    "Verification Email Sent To: " + currentUser.getEmail(),
+                                                    Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Log.e(TAG, "sendEmailVerification", task.getException());
+                                            Toast.makeText(getApplicationContext(),
+                                                    "Failed To Send Verification Email!",
+                                                    Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+
+                        // Handle Case When Email Not Verified
+                    }
+                }
+
+                // Login Success
+                startActivity(new Intent(Login.this, MainActivity.class));
+                finish();
+                return;
+            }
+        } else {
+            // Handle Failure
+        }
+    }
+}
+    simply replace if("password".equals(currentUser.getProviderData().get(0).getProviderId())) with if(currentUser.getEmail()!=null)
+        Share
+        Edit
+        Follow
+        Flag
+        answered Aug 29, 2020 at 18:45
+        user avatar
+        mayank1513
+        8,76766 gold badges3737 silver badges99
+ */
+
         mBinding = SignedInLayoutBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
         populateProfile(response);
