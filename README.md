@@ -12,6 +12,10 @@ A compatible FirebaseUI client is also available for [iOS](https://github.com/fi
 
 Source: https://github.com/firebase/FirebaseUI-Android
 
+I removed the LeakCanary setup completely from the project.
+
+Manual Update to Gradle 7.4.0
+
 Note: this app is running with my google-services.json file
 
 Firestore rule:
