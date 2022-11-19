@@ -93,10 +93,10 @@ dependencies {
     // demonstrative purposes, and you may find them useful in your own apps; YMMV.
     implementation(Config.Libs.Misc.permissions)
     implementation(Config.Libs.Androidx.constraint)
-    debugImplementation(Config.Libs.Misc.leakCanary)
-    debugImplementation(Config.Libs.Misc.leakCanaryFragments)
-    releaseImplementation(Config.Libs.Misc.leakCanaryNoop)
-    testImplementation(Config.Libs.Misc.leakCanaryNoop)
+    //debugImplementation(Config.Libs.Misc.leakCanary)
+    //debugImplementation(Config.Libs.Misc.leakCanaryFragments)
+    //releaseImplementation(Config.Libs.Misc.leakCanaryNoop)
+    //testImplementation(Config.Libs.Misc.leakCanaryNoop)
     // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
     implementation("com.github.bumptech.glide:glide:4.14.2")
     // https://mvnrepository.com/artifact/com.github.bumptech.glide/annotations
