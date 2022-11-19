@@ -12,8 +12,7 @@ A compatible FirebaseUI client is also available for [iOS](https://github.com/fi
 
 Source: https://github.com/firebase/FirebaseUI-Android
 
-Note: this app is running with my google-services.json file and at the moment the Firestore 
-examples don't run due to missing permissions on Server/console side.
+Note: this app is running with my google-services.json file
 
 Firestore rule:
 ```plaintext
