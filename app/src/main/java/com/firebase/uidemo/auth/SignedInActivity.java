@@ -28,6 +28,7 @@ import com.firebase.ui.auth.IdpResponse;
 import com.firebase.ui.auth.util.ExtraConstants;
 import com.firebase.uidemo.R;
 import com.firebase.uidemo.databinding.SignedInLayoutBinding;
+
 import com.firebase.uidemo.storage.GlideApp;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

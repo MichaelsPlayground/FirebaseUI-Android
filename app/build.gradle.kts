@@ -97,6 +97,11 @@ dependencies {
     debugImplementation(Config.Libs.Misc.leakCanaryFragments)
     releaseImplementation(Config.Libs.Misc.leakCanaryNoop)
     testImplementation(Config.Libs.Misc.leakCanaryNoop)
+    // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+    // https://mvnrepository.com/artifact/com.github.bumptech.glide/annotations
+    implementation("com.github.bumptech.glide:annotations:4.14.2")
+
 }
 
 apply(plugin = "com.google.gms.google-services")
