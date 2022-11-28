@@ -18,7 +18,17 @@ Manual Update to Gradle 7.4.0
 
 Note: this app is running with my google-services.json file
 
-Firestore rule:
+Realtime Database rules (**Note: these rules are insecure**):
+```plaintext
+{
+  "rules": {
+    ".read": "auth.uid != null",
+    ".write": "auth.uid != null"
+  }
+}
+```
+
+Firestore rule (**Note: these rules are insecure**):
 ```plaintext
 rules_version = '2';
 service cloud.firestore {
@@ -30,6 +40,17 @@ service cloud.firestore {
   }
 }
 ```
+
+Storage rule (**Note: these rules are insecure**):
+```plaintext
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if true;
+    }
+  }
+}
 
 ## Table of contents
 
